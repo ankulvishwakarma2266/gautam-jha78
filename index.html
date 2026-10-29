@@ -1,232 +1,450 @@
-<div class="nifty-page">
-  <style>
-    .nifty-page {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f8fd;
-      color: #171725;
-      padding: 0 18px 35px;
-      text-align: center;
-      box-sizing: border-box;
-      width: 100%;
-      overflow: hidden;
-    }
-    .nifty-page * { box-sizing: border-box; }
-    .nifty-page .profile {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid white;
-      background: #e8e9ee;
-      margin: -35px auto 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
-      box-shadow: 0 4px 15px #00000012;
-    }
-    .nifty-page h1 {
-      font-size: 32px;
-      margin: 10px 0 3px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-    .nifty-page .tagline {
-      color: #0878ed;
-      font-size: 19px;
-      font-weight: 700;
-      margin: 0 0 22px;
-    }
-    .nifty-page .stars {
-      color: #ff9700;
-      font-size: 34px;
-      letter-spacing: -2px;
-      line-height: 1.2;
-    }
-    .nifty-page .rating {
-      color: #777;
-      font-size: 17px;
-      font-weight: 700;
-      margin: 5px 0 27px;
-    }
-    .nifty-page .telegram-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      min-height: 94px;
-      padding: 20px 12px;
-      background: linear-gradient(110deg,#0865f5,#0750d9);
-      color: #fff !important;
-      text-decoration: none !important;
-      border-radius: 19px;
-      box-shadow: 0 8px 19px #0760ef35;
-      font-size: 22px;
-      font-weight: 700;
-      margin: 0 0 25px;
-    }
-    .nifty-page .telegram-btn:hover {
-      background: #064bc9;
-    }
-    .nifty-page .stats {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 12px;
-      margin-bottom: 25px;
-    }
-    .nifty-page .stat {
-      background: white;
-      border-radius: 22px;
-      padding: 18px 4px;
-      box-shadow: 0 5px 16px #00000008;
-    }
-    .nifty-page .stat strong {
-      display: block;
-      color: #0878ed;
-      font-size: 29px;
-      margin-bottom: 4px;
-    }
-    .nifty-page .stat span {
-      font-size: 16px;
-      font-weight: 700;
-    }
-    .nifty-page .main-heading {
-      font-size: 25px;
-      line-height: 1.5;
-      font-weight: 700;
-      margin: 20px 0 10px;
-    }
-    .nifty-page .blue { color: #0878ed; }
-    .nifty-page .subheading {
-      color: #777;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.5;
-      margin: 12px 0 22px;
-    }
-    .nifty-page .limited {
-      background: #fff0d9;
-      color: #e65c00;
-      border-radius: 35px;
-      padding: 17px 8px;
-      font-size: 18px;
-      font-weight: 700;
-      margin: 0 0 23px;
-    }
-    .nifty-page .feature {
-      background: #fff;
-      border-radius: 20px;
-      padding: 23px 17px;
-      margin-bottom: 13px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-align: left;
-      font-size: 19px;
-      font-weight: 700;
-      box-shadow: 0 5px 15px #00000008;
-    }
-    .nifty-page .feature-icon {
-      font-size: 31px;
-      flex-shrink: 0;
-    }
-    .nifty-page .bottom-btn { margin-top: 24px; }
-    .nifty-page .disclaimer {
-      color: #999;
-      font-size: 14px;
-      line-height: 1.6;
-      margin: 24px 0 38px;
-    }
-    .nifty-page .footer {
-      border-top: 2px solid #e5e5e9;
-      padding-top: 24px;
-      color: #888;
-      font-size: 17px;
-      font-weight: 700;
-    }
-    .nifty-page .footer span { color: #0878ed; }
-    @media(max-width:380px) {
-      .nifty-page { padding-left: 12px; padding-right: 12px; }
-      .nifty-page h1 { font-size: 27px; }
-      .nifty-page .tagline { font-size: 16px; }
-      .nifty-page .stats { gap: 7px; }
-      .nifty-page .stat strong { font-size: 24px; }
-      .nifty-page .stat span { font-size: 13px; }
-      .nifty-page .telegram-btn { font-size: 19px; }
-      .nifty-page .feature { font-size: 16px; }
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King Of Nifty</title>
 
-  <div class="profile">📈</div>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <h1>KING OF NIFTY</h1>
-  <p class="tagline">🏆 India's No.1 Stock Market Channel</p>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f4;
+  color: #536c62;
+}
 
-  <div class="stars">★★★★★</div>
-  <div class="rating">4.9/5 (2340 Reviews)</div>
+.page {
+  width: 100%;
+  padding: 45px 16px 65px;
+  background: #f4f7f4;
+}
 
-  <a class="telegram-btn"
-     href="https://t.me/YOUR_CHANNEL"
-     target="_blank" rel="noopener">
-    Join Free Telegram Channel →
-  </a>
+.topbar {
+  max-width: 650px;
+  margin: 0 auto 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-  <div class="stats">
-    <div class="stat">
-      <strong>50K+</strong>
-      <span>Members</span>
+.live {
+  font-size: 15px;
+  color: #008a62;
+  background: #eef7f2;
+  border: 1px solid #e0eee6;
+  padding: 12px 17px;
+  border-radius: 30px;
+}
+
+.dot {
+  color: #00a878;
+  margin-right: 8px;
+}
+
+.card {
+  width: 100%;
+  max-width: 635px;
+  margin: auto;
+  padding: 39px 31px;
+  background: #ffffff;
+  border: 1px solid #e2eae5;
+  border-radius: 43px;
+  box-shadow: 0 24px 45px rgba(37, 70, 53, 0.08);
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  width: 106px;
+  height: 106px;
+  flex-shrink: 0;
+  border-radius: 26px;
+  background: #eaf2ed;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.verified {
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  background: #008d65;
+  color: white;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.profile h1 {
+  font-size: 27px;
+  line-height: 1.28;
+  color: #10251d;
+  margin: 0 0 8px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 19px;
+  color: #91a59b;
+}
+
+.description {
+  font-size: 23px;
+  line-height: 1.65;
+  text-align: left;
+  margin: 25px 0 28px;
+  color: #5d7068;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.feature {
+  min-height: 83px;
+  background: #eef5f0;
+  border: 1px solid #e0eae3;
+  border-radius: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.feature strong {
+  color: #00835e;
+  font-size: 22px;
+  margin-bottom: 7px;
+}
+
+.feature span {
+  color: #8da297;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .4px;
+}
+
+.join-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 89px;
+  padding: 20px 10px;
+  border-radius: 27px;
+  background: linear-gradient(110deg, #00835e, #00ad79);
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 13px 22px rgba(0, 146, 101, .17);
+  transition: .2s;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 146, 101, .25);
+}
+
+.telegram-icon {
+  width: 28px;
+  height: 28px;
+  fill: white;
+  flex-shrink: 0;
+}
+
+.arrow {
+  font-size: 29px;
+}
+
+.direct {
+  font-size: 17px;
+  color: #8ba397;
+  margin: 18px 0 36px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.benefit {
+  min-height: 109px;
+  background: #eef5f0;
+  border: 1px solid #e0eae3;
+  border-radius: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 12px 4px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.check {
+  font-size: 31px;
+  color: #00855e;
+  font-weight: normal;
+}
+
+.plus {
+  font-size: 37px;
+  line-height: 29px;
+  color: #00855e;
+}
+
+.bottom-text {
+  font-size: 20px;
+  line-height: 1.55;
+  color: #91a59b;
+  margin: 0 0 27px;
+}
+
+.powered {
+  background: #eef5f0;
+  border: 1px solid #e0eae3;
+  border-radius: 21px;
+  padding: 20px 8px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+
+.powered span {
+  color: #e87920;
+}
+
+.copyright {
+  font-size: 16px;
+  font-weight: bold;
+  color: #91a59b;
+  margin-bottom: 20px;
+}
+
+.disclaimer {
+  background: #eef5f0;
+  border: 1px solid #e0eae3;
+  border-radius: 20px;
+  padding: 19px 15px;
+  color: #91a59b;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 35px 15px 50px;
+  }
+
+  .card {
+    padding: 28px 20px;
+    border-radius: 35px;
+  }
+
+  .topbar {
+    font-size: 18px;
+    margin-bottom: 27px;
+  }
+
+  .profile {
+    gap: 14px;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 23px;
+  }
+
+  .profile h1 {
+    font-size: 23px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .features,
+  .benefits {
+    gap: 10px;
+  }
+
+  .feature strong {
+    font-size: 19px;
+  }
+
+  .feature span {
+    font-size: 12px;
+  }
+
+  .join-btn {
+    font-size: 21px;
+    min-height: 78px;
+    gap: 10px;
+    border-radius: 23px;
+  }
+
+  .benefit {
+    font-size: 13px;
+    min-height: 100px;
+  }
+
+  .bottom-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    padding: 24px 13px;
+  }
+
+  .profile h1 {
+    font-size: 19px;
+  }
+
+  .avatar {
+    width: 76px;
+    height: 76px;
+  }
+
+  .join-btn {
+    font-size: 17px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <div class="topbar">
+    <div><span class="dot">●</span> King Of Nifty</div>
+    <div class="live">🟠 Live</div>
+  </div>
+
+  <main class="card">
+
+    <div class="profile">
+      <div class="avatar">
+        <!-- Yahan apni profile photo ka URL dalein -->
+        <img src="https://i.ibb.co/xSMyy5VJ/GAUTAM-IMAGE-1.jpg" alt="King Of Nifty">
+        <div class="verified">✓</div>
+      </div>
+
+      <div>
+        <h1>GAUTAM KUMAR JHA<br>(OFFICIAL)™</h1>
+        <div class="subtitle">Official Telegram Channel</div>
+      </div>
     </div>
-    <div class="stat">
-      <strong>5+</strong>
-      <span>Years</span>
+
+    <p class="description">
+      Daily stock market sessions — updates, chart reading &amp; trading psychology, explained simply.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <strong>Free</strong>
+        <span>TO JOIN</span>
+      </div>
+      <div class="feature">
+        <strong>100%</strong>
+        <span>VERIFIED</span>
+      </div>
+      <div class="feature">
+        <strong>Anytime</strong>
+        <span>LEAVE</span>
+      </div>
     </div>
-    <div class="stat">
-      <strong>95%</strong>
-      <span>Accuracy</span>
+
+    <!-- Apna Telegram channel link yahan dalein -->
+    <a class="join-btn"
+       href="https://t.me/+9kagW8WsU0xiNzY1"
+       target="_blank"
+       rel="noopener noreferrer">
+      <svg class="telegram-icon" viewBox="0 0 24 24"
+           aria-hidden="true">
+        <path d="M21.8 3.2 18.5 20c-.25 1.18-.9 1.47-1.83.92l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.14 9.35-8.44c.41-.36-.09-.56-.63-.2L5.68 13.55.7 12c-1.08-.34-1.1-1.08.23-1.6L20.4 2.84c.9-.33 1.69.22 1.4.36Z"/>
+      </svg>
+      <span>Join Telegram Channel</span>
+      <span class="arrow">→</span>
+    </a>
+
+    <div class="direct">♙ Direct link · opens in Telegram</div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <span class="check">✓</span>
+        <span>Free to join</span>
+      </div>
+      <div class="benefit">
+        <span class="plus">＋</span>
+        <span>Daily sessions</span>
+      </div>
+      <div class="benefit">
+        <span class="check">✓</span>
+        <span>Leave anytime</span>
+      </div>
     </div>
-  </div>
 
-  <div class="main-heading">
-    Get <span class="blue">FREE Daily Calls</span><br>
-    for NIFTY, BANKNIFTY &amp; SENSEX
-  </div>
+    <p class="bottom-text">
+      Official stock market education channel by King Of Nifty
+      (Dr. Vikas Laddha)™ — free to join.
+    </p>
 
-  <p class="subheading">
-    Join thousands of traders getting daily market analysis
-  </p>
+    <div class="powered">
+      🔥 Powered by <span> AD [AK] AGENCY</span>
+    </div>
 
-  <div class="limited">
-    🔥 Limited FREE Access Available
-  </div>
+    <div class="copyright">
+      © 2026 King Of Nifty · All rights reserved
+    </div>
 
-  <div class="feature">
-    <span class="feature-icon">📊</span>
-    <span>Daily Nifty &amp; BankNifty Levels</span>
-  </div>
+    <div class="disclaimer">
+      Educational content only. Not investment, trading or financial
+      advice. No profit or return is promised or implied.
+      Decisions are your own.
+    </div>
 
-  <div class="feature">
-    <span class="feature-icon">🎓</span>
-    <span>Educational Market Analysis</span>
-  </div>
-
-  <div class="feature">
-    <span class="feature-icon">👥</span>
-    <span>50,000+ Subscribers Community</span>
-  </div>
-
-  <a class="telegram-btn bottom-btn"
-     href="https://t.me/YOUR_CHANNEL"
-     target="_blank" rel="noopener">
-    Join Free Telegram Channel →
-  </a>
-
-  <div class="disclaimer">
-    <strong>Disclaimer:</strong><br>
-    This channel is for educational purposes only.
-    Trading involves market risk. Please consult your
-    financial advisor before making investment decisions.
-  </div>
-
-  <div class="footer">
-    🔥 Powered by <span>ADBUILDAGENCY</span>
-  </div>
+  </main>
 </div>
+</body>
+</html>
