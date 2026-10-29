@@ -3,191 +3,263 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navjot Brar Official</title>
+<title>Gautam Jha - Stock Learner</title>
 
 <style>
-body{
-margin:0;
-padding:0;
-font-family: system-ui, -apple-system, BlinkMacSystemFont,
-"Segoe UI", Roboto, "Apple Color Emoji",
-"Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+* {
+  box-sizing: border-box;
 }
 
-.container{
-max-width:520px;
-margin:auto;
-padding:20px;
-text-align:center;
+body {
+  margin: 0;
+  padding: 32px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f1e8;
+  color: #292722;
 }
 
-.card{
-background:rgba(0,0,0,0.85);
-padding:30px;
-border-radius:25px;
-box-shadow:0 15px 40px rgba(0,255,120,0.15);
-color:#ffffff;
+.landing-page {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 38px 32px 34px;
+  background: #ffffff;
+  border: 1px solid #e9e0d1;
+  border-radius: 40px;
+  box-shadow: 0 8px 30px rgba(110, 83, 35, 0.04);
+  text-align: center;
 }
 
-.profile img{
-width:130px;
-height:130px;
-border-radius:50%;
-border:4px solid #00ff7f;
-box-shadow:0 0 25px rgba(0,255,120,0.7);
-object-fit:cover;
+.profile-image {
+  width: 240px;
+  height: 240px;
+  max-width: 75%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #d69a25;
+  box-shadow: 0 10px 28px rgba(100, 75, 30, 0.15);
+  margin: 0 auto 25px;
+  display: block;
 }
 
-.heading{
-font-size:28px;
-font-weight:bold;
-background:linear-gradient(90deg,#00ff7f,#00c3ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-margin:15px 0;
+.name {
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 400;
+  margin: 0 0 14px;
+  letter-spacing: 0.3px;
 }
 
-.subtext{
-font-size:14px;
-color:#cccccc;
-margin-bottom:15px;
+.subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #858074;
+  margin: 0 0 25px;
 }
 
-.counter{
-font-size:14px;
-color:#aaffcc;
-margin-bottom:15px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
 }
 
-.countdown{
-font-size:16px;
-font-weight:bold;
-color:#ff4d6d;
-margin-bottom:20px;
+.tag {
+  padding: 12px 19px;
+  border: 1px solid #ead8b8;
+  border-radius: 30px;
+  background: #fbf2e3;
+  color: #8c6a30;
+  font-size: 16px;
 }
 
-.button{
-display:block;
-background:linear-gradient(90deg,#00ff7f,#00c3ff);
-color:#000000;
-padding:16px;
-font-size:16px;
-font-weight:bold;
-border-radius:50px;
-text-decoration:none;
-box-shadow:0 8px 25px rgba(0,255,120,0.4);
-margin:20px 0;
-animation:pulse 1.5s infinite;
+.telegram-button {
+  display: block;
+  width: 100%;
+  padding: 25px 12px;
+  margin: 0 0 16px;
+  background: #d09422;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 29px;
+  line-height: 1.35;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(178, 126, 29, 0.18);
+  transition: background 0.2s ease;
 }
 
-.feature{
-background:#111;
-padding:14px;
-border-radius:40px;
-margin:12px 0;
+.telegram-button:hover {
+  background: #b98118;
 }
 
-.disclaimer{
-font-size:11px;
-color:#aaaaaa;
-margin-top:20px;
-line-height:1.5;
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
 }
 
-.powered{
-font-size:12px;
-color:#888;
-margin-top:20px;
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 88px;
+  padding: 17px 21px;
+  text-align: left;
+  border: 1px solid #e6e0d5;
+  border-radius: 22px;
+  background: #ffffff;
+  font-size: 21px;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.06);}
-100%{transform:scale(1);}
+.check {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #f4e6ca;
+  color: #9a6c19;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .landing-page {
+    padding: 28px 20px 25px;
+    border-radius: 32px;
+  }
+
+  .profile-image {
+    width: 225px;
+    height: 225px;
+    margin-bottom: 24px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .tags {
+    margin-bottom: 42px;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 11px 15px;
+  }
+
+  .telegram-button {
+    font-size: 23px;
+    padding: 22px 8px;
+    border-radius: 18px;
+  }
+
+  .feature {
+    min-height: 88px;
+    padding: 15px;
+    gap: 15px;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+
+  .check {
+    width: 47px;
+    height: 47px;
+    font-size: 26px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-<div class="card">
+<div class="landing-page">
 
-<div class="profile">
-<img src="https://i.ibb.co/Ng7rTsWX/navjot-photo.jpg">
+  <!-- PROFILE PHOTO -->
+  <img
+    class="profile-image"
+    src="https://i.ibb.co/KM5ZRTx/GAUTAM-IMAGE-1.jpg"
+    alt="GAUTAM KUMAR JHA {OFFICIAL}..."
+  >
+
+  <h1 class="name">GAUTAM JHA</h1>
+
+  <p class="subtitle">
+    Daily Market Updates • Trading Insights
+  </p>
+
+  <div class="tags">
+    <span class="tag">NIFTY</span>
+    <span class="tag">BANKNIFTY</span>
+    <span class="tag">OPTIONS</span>
+  </div>
+
+  <!-- FIRST TELEGRAM BUTTON -->
+  <a
+    class="telegram-button"
+    href="https://t.me/+9kagW8WsU0xiNzY1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🚀 JOIN TELEGRAM CHANNEL
+  </a>
+
+  <div class="features">
+
+    <div class="feature">
+      <span class="check">✓</span>
+      <span>Daily market analysis &amp; trading insights</span>
+    </div>
+
+    <div class="feature">
+      <span class="check">✓</span>
+      <span>NIFTY &amp; BANKNIFTY market updates</span>
+    </div>
+
+    <div class="feature">
+      <span class="check">✓</span>
+      <span>Useful market levels &amp; regular updates</span>
+    </div>
+
+    <div class="feature">
+      <span class="check">✓</span>
+      <span>Simple content for traders &amp; beginners</span>
+    </div>
+
+    <div class="feature">
+      <span class="check">✓</span>
+      <span>Active trading community discussions</span>
+    </div>
+
+  </div>
+
+  <!-- SECOND TELEGRAM BUTTON -->
+  <a
+    class="telegram-button"
+    href="https://t.me/+9kagW8WsU0xiNzY1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🚀 JOIN TELEGRAM CHANNEL
+  </a>
+
 </div>
-
-<div class="heading">
-NAVJOT BRAR OFFICIAL
-</div>
-
-<div class="subtext">
-📊 India’s Fast Growing Stock Market Learning Channel
-</div>
-
-<div id="liveCount" class="counter">
-🔥 2,389 Serious Traders Joined in Last 24 Hours
-</div>
-
-<div id="countdown" class="countdown">
-Market Insights Access Ends In: 02:00
-</div>
-
-<a href="https://t.me/+H9TDeDhVZHg3ZTFl" target="_blank" class="button">
-JOIN OUR LEARNING CHANNEL
-</a>
-
-<div class="feature">📈 Daily Stock Market Analysis</div>
-<div class="feature">💹 Intraday & Swing Trading Learning</div>
-<div class="feature">🛡 Risk Management & Capital Protection</div>
-<div class="feature">🎯 Beginner to Advanced Guidance</div>
-
-<a href="https://t.me/+H9TDeDhVZHg3ZTFl" target="_blank" class="button">
-JOIN OUR LEARNING CHANNEL
-</a>
-
-<div class="disclaimer">
-Disclaimer: This channel is for educational purposes only.
-Stock market investments are subject to market risk.
-</div>
-
-<div class="powered">
-Powered by <strong>amitgrowthagency</strong>
-</div>
-
-</div>
-</div>
-
-<script>
-// 2 Minute Countdown
-var time = 120;
-var countdown = document.getElementById("countdown");
-
-var timer = setInterval(function(){
-var minutes = Math.floor(time/60);
-var seconds = time%60;
-
-countdown.innerHTML = "Market Insights Access Ends In: " +
-(minutes<10?"0":"")+minutes+":"+
-(seconds<10?"0":"")+seconds;
-
-time--;
-
-if(time<0){
-clearInterval(timer);
-countdown.innerHTML="Limited Access Remaining!";
-}
-},1000);
-
-// Fake Live Counter
-var base=2389;
-setInterval(function(){
-base+=Math.floor(Math.random()*4);
-document.getElementById("liveCount").innerHTML=
-"🔥 "+base+" Serious Traders Joined in Last 24 Hours";
-},4000);
-</script>
 
 </body>
 </html>
